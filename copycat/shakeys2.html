@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <header>
+<img src:("http://www.stoplookcapture.com/wp-content/uploads/2010/03/Shakeysmojo.jpg")>
+  </header>
+  <div
+  title>shakeys</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shakes2.css" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+  <style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<body>
+<div class="w3-container">
+  <h2>I am ordering</h2>
+  <p>order menu</p>
+</div>
+  <div class="w3-content w3-display-container">
+  <img class="mySlides" src="images\scallopprimodesktopcarousel.jpg">
+  <img class="mySlides" src="images\slush.jpg">
+  <img class="mySlides" src="images\londondesktopcarousel.jpg">
+  <div class="w3-center w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+</head>
+<body>
+
+  <div id="footer">
+    <p>
+        <a href="http://www.shakeyspizza.ph/index.asp">Home</a> -
+        <a href="http://shakeyspizza.ph/corporate/home">About Us</a> -
+        <a href="http://www.shakeyspizza.ph/franchising.asp">Franchising</a> -
+        <a href="http://careers.shakeyspizza.ph/707/cw/en/listing/">Careers</a> -
+        <a href="http://www.shakeyspizza.ph/contact-us.asp">Contact Us</a> -
+        <!--<a href="feedback-form.asp">Feedback Form</a> - -->
+        <a href="http://www.shakeyspizza.ph/privacy-policy.asp">Privacy Policy</a> -
+        <a href="http://www.shakeyspizza.ph/terms-conditions.asp">Terms and Conditions</a><!-- -
+        <a href="faq.asp">FAQs</a>-->
+	</p>
+
+</div>
+<br />
+<br />
+</body>
+</html>

@@ -1,0 +1,4 @@
+test2.rb
+puts "where you at"
+name = gets.chomp
+puts "where you at #{name}"

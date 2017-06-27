@@ -1,0 +1,102 @@
+
+.hidden {
+  display: none;
+}
+#page-container{
+  width: 760px;
+  margin: auto;
+  text-align: left;
+}
+#main-nav {
+    background: red;
+    height: 50px;
+}
+#header {
+    background: url('http://www.subcide.com/images/dynamic/css-layout/about.jpg');
+    height: 150px;
+
+}
+#sidebar-a {
+    float: right;
+    width: 280px;
+    line-height: 18px;
+  }
+  #sidebar-a .padding{
+      padding :25px;
+    }
+#content {
+    margin-right: 280px;
+    line-height: 18px;
+}
+#content .padding {
+    padding: 25px;
+}
+
+#footer {
+    clear: both;
+    height: 66px;
+    font-family: Tahoma, Arial, Helvetica, Sans-serif;
+    font-size: 10px;
+    color: #c9c9c9;
+}
+#footer a: hover {
+    color: #db6d16;
+}
+#footer #altnav {
+    clear: both;
+    width: 350px;
+    float: right;
+    text-align: right;
+    padding-top: 13px;
+}
+#footer #copyright {
+    padding-top: 13px;
+}
+h1 {
+    margin: 0;
+    padding: 0;
+    float: right;
+    margin-top: 57px;
+    padding-right: 31px;
+}
+#content p {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 15px;
+}
+#content h2 {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+}
+
+body {
+    font-family: Arial, Helvetica, Verdana, Sans-serif;
+    font-size: 12px;
+    color: #666666;
+    text-align: center;
+}
+
+<h2><img src="images/headings/about.gif" width="54" height="14" alt="About" /></h2>
+2
+
+3
+<h2><img src="images/headings/contact.gif" width="98" height="14" alt="Contact Us" /></h2>
+1
+/* Main Navigation */
+#main-nav { height: 50px; }
+#main-nav dl { margin: 0; padding: 0; }
+/* IE5 Mac Hack \*/
+#main-nav { padding-left: 11px; }
+/*/
+#main-nav { padding-left: 11px; overflow: hidden; }
+/* End Hack */
+#main-nav dt { float: left; }
+#main-nav dt a {
+    display: block;
+    height: 0px !important;
+    height /**/:50px; /* IE 5/Win hack */
+    padding: 50px 0 0 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}

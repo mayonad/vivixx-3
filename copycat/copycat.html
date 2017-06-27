@@ -1,0 +1,600 @@
+
+<!DOCTYPE html><html><head><title> Appy Fizz</title><link
+rel="stylesheet" href="http://appyfizz.com/wp-content/themes/appfizz/style.css" type="text/css" media="screen" /><link
+rel="icon" href="http://appyfizz.com/wp-content/themes/appfizz/images/favicon.ico"><meta
+name="viewport" content="width=device-width, initial-scale=1"><style type="text/css">.sk-circle{width:80px;height:80px;position:relative}.sk-circle .sk-child{width:100%;height:100%;position:absolute;left:0;top:0}.sk-circle .sk-child:before{content:'';display:block;margin:0
+auto;width:15%;height:15%;background-color:red;border-radius:100%;-webkit-animation:sk-circleBounceDelay 1.2s infinite ease-in-out both;animation:sk-circleBounceDelay 1.2s infinite ease-in-out both}.sk-circle .sk-child:nth-child(odd):before{}.sk-circle .sk-circle2{-webkit-transform:rotate(30deg);-ms-transform:rotate(30deg);transform:rotate(30deg)}.sk-circle .sk-circle3{-webkit-transform:rotate(60deg);-ms-transform:rotate(60deg);transform:rotate(60deg)}.sk-circle .sk-circle4{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}.sk-circle .sk-circle5{-webkit-transform:rotate(120deg);-ms-transform:rotate(120deg);transform:rotate(120deg)}.sk-circle .sk-circle6{-webkit-transform:rotate(150deg);-ms-transform:rotate(150deg);transform:rotate(150deg)}.sk-circle .sk-circle7{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}.sk-circle .sk-circle8{-webkit-transform:rotate(210deg);-ms-transform:rotate(210deg);transform:rotate(210deg)}.sk-circle .sk-circle9{-webkit-transform:rotate(240deg);-ms-transform:rotate(240deg);transform:rotate(240deg)}.sk-circle .sk-circle10{-webkit-transform:rotate(270deg);-ms-transform:rotate(270deg);transform:rotate(270deg)}.sk-circle .sk-circle11{-webkit-transform:rotate(300deg);-ms-transform:rotate(300deg);transform:rotate(300deg)}.sk-circle .sk-circle12{-webkit-transform:rotate(330deg);-ms-transform:rotate(330deg);transform:rotate(330deg)}.sk-circle .sk-circle2:before{-webkit-animation-delay:-1.1s;animation-delay:-1.1s}.sk-circle .sk-circle3:before{-webkit-animation-delay:-1s;animation-delay:-1s}.sk-circle .sk-circle4:before{-webkit-animation-delay:-0.9s;animation-delay:-0.9s}.sk-circle .sk-circle5:before{-webkit-animation-delay:-0.8s;animation-delay:-0.8s}.sk-circle .sk-circle6:before{-webkit-animation-delay:-0.7s;animation-delay:-0.7s}.sk-circle .sk-circle7:before{-webkit-animation-delay:-0.6s;animation-delay:-0.6s}.sk-circle .sk-circle8:before{-webkit-animation-delay:-0.5s;animation-delay:-0.5s}.sk-circle .sk-circle9:before{-webkit-animation-delay:-0.4s;animation-delay:-0.4s}.sk-circle .sk-circle10:before{-webkit-animation-delay:-0.3s;animation-delay:-0.3s}.sk-circle .sk-circle11:before{-webkit-animation-delay:-0.2s;animation-delay:-0.2s}.sk-circle .sk-circle12:before{-webkit-animation-delay:-0.1s;animation-delay:-0.1s}@-webkit-keyframes sk-circleBounceDelay{0%,80%,100%{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes sk-circleBounceDelay{0%,80%,100%{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}#spinner{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);z-index:100000}#loading{position:fixed;top:0;left:0;bottom:0;right:0;background:white;z-index:1000000000}</style> <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-99563897-1','auto');ga('send','pageview');</script> </head><body><div
+id="loading"><div
+id="spinner" class="sk-circle" style=""><div
+class="sk-circle1 sk-child"></div><div
+class="sk-circle2 sk-child"></div><div
+class="sk-circle3 sk-child"></div><div
+class="sk-circle4 sk-child"></div><div
+class="sk-circle5 sk-child"></div><div
+class="sk-circle6 sk-child"></div><div
+class="sk-circle7 sk-child"></div><div
+class="sk-circle8 sk-child"></div><div
+class="sk-circle9 sk-child"></div><div
+class="sk-circle10 sk-child"></div><div
+class="sk-circle11 sk-child"></div><div
+class="sk-circle12 sk-child"></div></div></div><canvas
+id="myCanvas" width="400" height="400" resize="true" style="pointer-events:none; position: fixed; top: 0; left:0; width:100%; height: 100%; z-index:1000000000;">
+</canvas><div
+id="hamburger"><div
+class="row"><li></li><li></li><li></li><li></li><li></li></div><div
+class="row"><li></li><li></li><li></li><li></li><li></li></div><div
+class="row"><li></li><li></li><li></li><li></li><li></li></div></div><div
+id="header">
+<img
+id="logo" src="http://appyfizz.com/wp-content/themes/appfizz/images/logo.png" alt="" /><ul
+id="nav" class="group"><li
+class="first" data-id="two">History</li><li
+data-id="four">Product</li><li
+data-id="five">Commercial</li><li
+id="feelnav" data-id="seven">Feel the Fizz</li><li
+data-id="eight">Download</li><li
+data-id="nine">Social</li><a
+target="_blank" href="https://twitter.com/iamappyfizz"><li
+data-id=""><img
+class="white" src="http://appyfizz.com/wp-content/themes/appfizz/images/twitter_white.png" alt="" /> <img
+class="black" src="http://appyfizz.com/wp-content/themes/appfizz/images/twitter_black.png" alt="" /> <img
+class="red" src="http://appyfizz.com/wp-content/themes/appfizz/images/twitter_red.png" alt="" /></li></a>
+<a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><li
+data-id=""><img
+class="white" src="http://appyfizz.com/wp-content/themes/appfizz/images/insta_white.png" alt="" /><img
+class="black" src="http://appyfizz.com/wp-content/themes/appfizz/images/insta_black.png" alt="" /><img
+class="red" src="http://appyfizz.com/wp-content/themes/appfizz/images/insta_red.png" alt="" /></li></a>
+<a
+target="_blank" href="https://twitter.com/iamappyfizz"><li
+data-id="" class="nodesktop">twitter</li></a>
+<a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><li
+data-id="" class="nodesktop">instagram</li></a></ul></div><div
+id="one" data-text="white" class="block one section"><div
+class="desktop landing"><div
+class="slideshow" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/landing_new-1.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div><div
+class="slideshow" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/Landing_01.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div><div
+class="slideshow" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/Landing_02.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div></div><div
+class="landing mobile">
+<a
+href="http://appyfizz.com/biggboss10/"><div
+class="slideshow" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/Salman_Mobile.png');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div></a><div
+class="slideshow" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/m_landing_03.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div><div
+class="slideshow" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/m_landing_02.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div><div
+class="slideshow" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/m_landing_03.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div></div></div><div
+id="two" data-text="white" class="block two group section double"><div
+class="left" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/bowl.gif');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div><div
+class="right"><div
+class="carousel"><div
+class="story"><h1> APPY FIZZ HISTORY</h1><p>
+Appy Fizz is the champagne of fruit drinks. In 2005, Appy fizz was launched as India’s first sparkling apple juice drink. Bubbly, sweet and tangy, with a light refreshing taste, Appy fizz quickly became a favorite amongst youth as a healthier alternative to colas. With this in mind, we’ve designed a brand that would convey a youthful energy. Sleek packaging, bold colors, glamorous campaigns - we think we’ve successfully captured Appy Fizz fun and edgy spirit. Pop open a bottle, drink it alone or mix it. Feel the fizz.</p></div><div
+class="story"><p></p></div><div
+class="story"><p></p></div></div></div></div><div
+id="four" data-text="black" class="block four section" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/products.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"><h2>  Apple Fizz is available in 250ml, 1 ltr and 1.5 ltr PET, 200ml RGB and 250ml can.</h2></div><div
+id="five" data-text="white" class="block five section"><video
+id="video" src="" style="
+width: 100%;
+height: calc(100% + 10px);
+margin-top: -10px;
+background: transparent url('http://appyfizz.com/wp-content/uploads/2016/05/appy-fizz-watch-1.jpg') 50% 50% / cover no-repeat ;
+background-size: cover;
+font-size: 0;
+line-height: 0;
+display: block;" preload="none" >
+</video><div
+class="watch"><h1>WATCH THE AD</h1></div></div><div
+id="six"  data-text="black" class="block six group section double"><div
+class="left" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/bottle.gif');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div><div
+class="right" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/martini.gif');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div></div><div
+id="seven" data-text="red" class="block seven section"><div
+class="cover" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/feelthefizz.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div><h1>FEEL THE FIZZ</h1>
+<canvas
+id="threecanvas" width="300" height="300"></canvas></div><div
+id="eight" data-text="white" class="block eight section double"><div
+class="left" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/ringtone.png');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div><div
+class="right" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/slice.gif');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div></div><div
+id="nine" data-text="white" class="block nine section"><div
+id="instagram" class="instagram"><div
+class="tile typea"><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_01.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_02.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a>
+<a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_03.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://twitter.com/iamappyfizz"><div
+class="med"><h3>No blues this Monday morning. Just blacks, reds, and a whole lotta fizz.  #FeelTheFizz</h3>
+<img
+src="http://appyfizz.com/wp-content/themes/appfizz/images/twitter_white.png" alt="" /></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="large" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_l_01.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a></div><div
+class="tile typeb">
+<a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_04.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_05.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_06.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://twitter.com/iamappyfizz"><div
+class="med"><h3>Fizz never felt this good. Or looked this hot.  #FeelTheFizz</h3>
+<img
+src="http://appyfizz.com/wp-content/themes/appfizz/images/twitter_red.png" alt="" /></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="large" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_l_02.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a></div><div
+class="tile typec">
+<a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_08.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_07.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a>
+<a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_09.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a>
+<a
+target="_blank" href="https://twitter.com/iamappyfizz"><div
+class="med"><h3>You've gotta feel it to believe it.  #FeelTheFizz</h3>
+<img
+src="http://appyfizz.com/wp-content/themes/appfizz/images/twitter_white.png" alt="" /></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="large" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_l_04.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a></div></div><div
+id="instagram" class="instagram"><div
+class="tile typea">
+<a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_01.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_02.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_03.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://twitter.com/iamappyfizz"><div
+class="med"><h3>No blues this Monday morning. Just blacks, reds, and a whole lotta fizz.  #FeelTheFizz</h3>
+<img
+src="http://appyfizz.com/wp-content/themes/appfizz/images/twitter_red.png" alt="" /></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="large" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_l_01.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a></div><div
+class="tile typeb">
+<a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_04.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_05.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_06.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://twitter.com/iamappyfizz"><div
+class="med"><h3>Fizz never felt this good. Or looked this hot.  #FeelTheFizz</h3>
+<img
+src="http://appyfizz.com/wp-content/themes/appfizz/images/twitter_red.png" alt="" /></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="large" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_l_02.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a></div><div
+class="tile typec">
+<a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_08.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_07.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_09.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://twitter.com/iamappyfizz"><div
+class="med"><h3>You've gotta feel it to believe it.  #FeelTheFizz</h3>
+<img
+src="http://appyfizz.com/wp-content/themes/appfizz/images/twitter_white.png" alt="" /></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="large" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_l_04.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a></div></div><div
+id="instagram" class="instagram"><div
+class="tile typea">
+<a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_01.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_02.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_03.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://twitter.com/iamappyfizz"><div
+class="med"><h3>No blues this Monday morning. Just blacks, reds, and a whole lotta fizz.  #FeelTheFizz</h3>
+<img
+src="http://appyfizz.com/wp-content/themes/appfizz/images/twitter_white.png" alt="" /></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="large" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_l_01.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a></div><div
+class="tile typeb">
+<a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_04.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_05.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a>
+<a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_06.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://twitter.com/iamappyfizz"><div
+class="med"><h3>Fizz never felt this good. Or looked this hot.  #FeelTheFizz</h3>
+<img
+src="http://appyfizz.com/wp-content/themes/appfizz/images/twitter_red.png" alt="" /></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="large" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_l_02.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a></div><div
+class="tile typec">
+<a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_08.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_07.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="small" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_09.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a><a
+target="_blank" href="https://twitter.com/iamappyfizz"><div
+class="med"><h3>You've gotta feel it to believe it.  #FeelTheFizz</h3>
+<img
+src="http://appyfizz.com/wp-content/themes/appfizz/images/twitter_white.png" alt="" /></div>
+</a><a
+target="_blank" href="https://www.instagram.com/feelthefizz/"><div
+class="large" style="background: url('http://appyfizz.com/wp-content/uploads/2016/05/inst_l_04.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;"></div>
+</a></div></div></div><div
+class="block footer group">
+<img
+class="logo" src="http://appyfizz.com/wp-content/themes/appfizz/images/parleagro.png" alt="" />
+<span>Copyright © Parle Agro Pvt Ltd.  All Rights Reserved.</span>
+<img
+data-id="one" class="arrow" src="http://appyfizz.com/wp-content/themes/appfizz/images/up_arrow.png" alt="" /></div> <script type="text/javascript" src="http://appyfizz.com/wp-content/themes/appfizz/scripts/jquery-2.1.4.min.js"></script> <script type="text/javascript" src="http://appyfizz.com/wp-content/themes/appfizz/scripts/paper-full.min.js"></script>  <script src="http://appyfizz.com/wp-content/themes/appfizz/scripts/three.min.js"></script> <script src="http://appyfizz.com/wp-content/themes/appfizz/scripts/TrackballControls.js"></script> <script src="http://appyfizz.com/wp-content/themes/appfizz/scripts/main.js"></script> <script type="text/paperscript" canvas="myCanvas">/*<![CDATA[*/var bubbles=[];var $threeCanvas=$("#threecanvas")
+function Bubble(posX,posY,radius){this.path=new Path.Circle(new Point(posX,posY),radius);this.path.strokeColor="white";this.path.strokeWidth=1.5;this.path.fillColor="rgba(255,255,255, 0)";this.distanceTravelled=0;this.unscaled=true;this.scaledTimes=0;      this.counter=0;this.distanceCap=Math.random()*200;this.diameter=radius*2;this.area=Math.pow(this.diameter/2,2)*Math.PI;this.accel=this.area/30+1;if(Math.random()<.5){this.left=true;this.right=false;}else{this.right=true;this.left=false;}}
+Bubble.prototype.move=function(){if(this.stop){return}
+if(this.right){this.path.position.x+=Math.random()*.5;}else{this.path.position.x-=Math.random()*.5;}
+this.path.position.y+=-this.accel;this.distanceTravelled+=this.accel;this.scale()}
+Bubble.prototype.scale=function(){if(this.distanceTravelled>this.distanceCap&&(this.scaledTimes<20||this.area<1.5)){this.scaledTimes++;this.diameter*=1.02
+this.area*=1.04;this.path.scale(1.02);this.accel*=1.02;}
+if(this.distanceTravelled>window.innerHeight){this.path.remove();this.stop=true;}}
+var count=0;var w=window.innerWidth;var h=window.innerHeight;var mouseX,mouseY;$('html').mousemove(function(ev){mouseX=ev.clientX;mouseY=ev.clientY;})
+document.addEventListener("touchstart",handleStart,false);document.addEventListener("touchend",handleEnd,false);function handleStart(ev){var touch=ev.touches[0];mouseX=touch.clientX;mouseY=touch.clientY;}
+function handleEnd(ev){mouseX=null;mouseY=null;}
+var $nav=$("#header ul")
+function addBubble(){if($nav.hasClass("opened")){return}
+var radius=((Math.random()*4)+2);var bubble=new Bubble(mouseX,mouseY,radius);bubble.path.fillColor="#ffffff";bubbles.push(bubble);}
+function addHoverBubble(){var radius=((Math.random()*2)+.5);var color;var x=Math.random()*(window.hoverRight-window.hoverLeft)+window.hoverLeft;var y;if(window.hoverBottom){y=Math.random()*(window.hoverBottom-window.hoverTop)+window.hoverTop;color="white";}else{y=window.hoverTop;color=window.bubbleColor||"red";}
+var bubble=new Bubble(x,y,radius);bubble.path.strokeColor=color;bubble.path.fillColor=color;bubbles.push(bubble);}
+var tick=false;function onFrame(){var isHovered=$threeCanvas.is(":hover");window.isHovered=isHovered;if(!isHovered){if(tick){tick=!tick}
+count++;if(window.hovering&&window.innerWidth>600){if(count%10==0||count%6==0||count%15==0||count%50==0||count%30==0){addHoverBubble()}}else{if(count%60==0||count%32==0||count%100==0||count%110==0){addBubble()}}
+if(bubbles.length>50){for(var i=0;i<bubbles.length-20;i++){bubbles[i].path.remove()}
+bubbles=bubbles.slice(bubbles.length-20,bubbles.length);}
+for(var i=0;i<bubbles.length;i++){bubbles[i].move()}}else{if(!tick){for(var i=0;i<bubbles.length;i++){bubbles[i].path.visible=false;tick=true;}}}}/*]]>*/</script> </body></html>

@@ -1,0 +1,7 @@
+# save as .csv
+
+require 'csv'
+
+csv.foreach('customers.csv', headers: true) do |row|
+puts "person #{ row['first_name']}"
+end
