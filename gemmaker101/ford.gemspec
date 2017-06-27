@@ -8,4 +8,4 @@ s.email ="dea.lorenzo@vivixxacademy.com"
 s.files =["lib/ford.rb"]
 s.homepage ="http://rubygems.org/gems/weather"
 s.license ="MIT"
-end
+
